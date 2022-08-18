@@ -1,0 +1,53 @@
+<%- include('partials/prologue.ejs', {title: `Profile List MBTI | Boo Personality Database`, description: `Find out what s Myers Briggs, Enneagram, and Zodiac sign are in the Soulverse, the MBTI personality database of celebrities and fictional characters.`}) %>
+
+<div style="text-align: center;">
+  <h3>List of Profiles</h3>
+  <table>
+    <thead>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Mbti
+      </th>
+      <th>
+        Enneagram
+      </th>
+      <th>
+        Variant
+      </th>
+      <th>
+        Tritype
+      </th>
+      <th>
+        Socionics
+      </th>
+      <th>
+        Sloan
+      </th>
+      <th>
+        Psyche
+      </th>
+    <tbody>
+      <% for(var i=0; i<profiles.length; i++) { %>
+        <tr>
+          <td><a href="/<%= profiles[i].id %>" style="color: blue;"><%= profiles[i].name %></a></td>
+          <td><%= profiles[i].description %></td>
+          <td><%= profiles[i].mbti %></td>
+          <td><%= profiles[i].enneagram %></td>
+          <td><%= profiles[i].variant %></td>
+          <td><%= profiles[i].tritype %></td>
+          <td><%= profiles[i].socionics %></td>
+          <td><%= profiles[i].sloan %></td>
+          <td><%= profiles[i].psyche %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+  
+</div>
+              
+<%- include('partials/epilogue.ejs') %>
